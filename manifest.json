@@ -1,0 +1,23 @@
+{
+  "name": "Criminus",
+  "short_name": "Wash.io",
+  "description": "Washing machine slot booking app",
+  "categories": ["college", "tool"],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "natural",
+  "start_url": "/?application=true",
+  "icons": [
+    {
+      "src": "app-icon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "app-icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
