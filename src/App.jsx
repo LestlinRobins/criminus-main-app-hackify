@@ -5,8 +5,6 @@ import { Info } from "./components/Info";
 import { Search } from "./components/Search";
 import { Report } from "./components/Report";
 import { Defense } from "./components/Defense";
-import { OfflineAlert } from "./components/OfflineAlert";
-import { AppUpdate } from "./components/AppUpdate";
 import "./App.css";
 
 function App() {
@@ -31,9 +29,6 @@ function App() {
 
   return (
     <div className="app-container">
-      <OfflineAlert />
-      <AppUpdate />
-
       <header className="app-header">
         <div className="header-content">
           <span className="page-title">Home Page</span>
