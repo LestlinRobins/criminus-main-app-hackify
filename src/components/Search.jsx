@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./Search.css";
-
+import { ArrowUpCircle } from "react-feather";
 const Search = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -46,16 +45,6 @@ const Search = () => {
   return (
     <div className="search-page">
       <div className="search-container">
-        <div className="header">
-          <div className="user-info">
-            <span className="username">Sathyameva Jayadhe</span>
-            <div className="icons">
-              <span className="settings-icon">⚙️</span>
-              <div className="profile-avatar"></div>
-            </div>
-          </div>
-        </div>
-
         <div className="recent-searches">
           {recentSearches.map((search, index) => (
             <div key={index} className="search-item">
@@ -133,7 +122,7 @@ const Search = () => {
             </div>
             <input
               type="text"
-              placeholder="AI Search"
+              placeholder="Mew..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={handleFocus}
@@ -141,28 +130,7 @@ const Search = () => {
               className="search-input"
             />
             <button className="send-button">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 5L12 19"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M5 12L19 12"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <ArrowUpCircle />
             </button>
           </div>
         </div>
