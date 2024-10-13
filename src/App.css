@@ -179,6 +179,8 @@ body {
   padding: 12px 8px;
   border-top: 1px solid #2a2a2a;
   width: 100%; /* Ensure full width */
+  position: fixed;
+  bottom: 0px;
 }
 
 .tab-button {
@@ -343,6 +345,7 @@ body {
 .report-container,
 .defense-container {
   width: 100%;
+  padding: 16px;
 }
 
 /* Consistent content width for index.css */
