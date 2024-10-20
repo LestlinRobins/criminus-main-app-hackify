@@ -45,7 +45,16 @@
   color: white;
   border-bottom: 2px solid white;
 }
-
+.tab-button:active {
+  border: none;
+}
+.tab-button.active:active {
+  border: none;
+  outline: none;
+}
+.tab-button.active:focus {
+  outline: none;
+}
 .crimes-container {
   display: flex;
   flex-direction: column;
