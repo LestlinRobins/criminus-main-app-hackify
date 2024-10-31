@@ -2,16 +2,23 @@
 import React from "react";
 import { useState } from "react";
 import ChildSafety from "./ChildSafety";
+import AnonymousReporting from "./AnonymousReporting";
 
 export function Home() {
   const [showChildSafety, setShowChildSafety] = useState(false);
+  const [showAnonymousReporting, setShowAnonymousReporting] = useState(false);
 
   const handleChildSafetyClick = () => {
     setShowChildSafety(true);
   };
 
+  const handleAnonymousReportingClick = () => {
+    setShowAnonymousReporting(true);
+  };
+
   const handleBackClick = () => {
     setShowChildSafety(false);
+    setShowAnonymousReporting(false);
   };
 
   return (
@@ -51,6 +58,41 @@ export function Home() {
           </div>
           <ChildSafety />
         </div>
+      ) : showAnonymousReporting ? (
+        <div>
+          <div className="back-button-container" style={{ margin: "20px 0" }}>
+            <button
+              onClick={handleBackClick}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "8px 16px",
+                background: "#121212",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer",
+                fontWeight: "bold",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ marginRight: "8px" }}
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+              Back to Home
+            </button>
+          </div>
+          <AnonymousReporting />
+        </div>
       ) : (
         <>
           <div className="announcement-section">
@@ -89,7 +131,11 @@ export function Home() {
                 </div>
               </div>
 
-              <div className="feature-card">
+              <div
+                className="feature-card"
+                onClick={handleAnonymousReportingClick}
+                style={{ cursor: "pointer" }}
+              >
                 <div className="feature-icon"></div>
                 <div className="feature-details">
                   <h3>Anonymous Reporting</h3>
